@@ -9,11 +9,14 @@ También se revisaron algunos problemas de seguridad que tiene el código y se r
 1. Compilación inicial
 
 Para realizar la compilación utilicé:
-
 Compilador: GCC (GNU Compiler Collection)
+
 Distribuidor: MSYS2 / MinGW-w64
+
 Versión: 16.1.0
+
 Estándar de C: C11
+
 Opción utilizada: -std=c11
 
 Al compilar el programa original con GCC se presentan errores debido a que algunas de las sintaxis utilizadas son únicamente para C++.
