@@ -12,6 +12,7 @@ Para realizar la compilación utilicé:
 Compilador: GCC (GNU Compiler Collection)
 
 Distribuidor: MSYS2 / MinGW-w64
+
 <img width="386" height="211" alt="image" src="https://github.com/user-attachments/assets/cce67a43-34bc-40c8-aaf3-85a9c7313be4" />
 
 
