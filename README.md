@@ -1,4 +1,4 @@
-Practica 1
+                                                                            Practica 1
 Auditoría y verificación de seguridad en el manejo de cadenas en C
 
 En esta práctica se realizó una auditoría al código original para poder identificar los diferentes errores y warnings que se generan al momento de compilarlo.
@@ -54,7 +54,7 @@ Opción que permite obtener información adicional dentro del compilador.
 
 --------------------------------------------------------
 
-reglas/recomendaciones CERT
+                                                      Reglas/recomendaciones CERT
 
 <img width="611" height="712" alt="image" src="https://github.com/user-attachments/assets/3359d125-733c-40c6-b6f8-3e5367d8cdd7" />
 
