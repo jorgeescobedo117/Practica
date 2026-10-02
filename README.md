@@ -20,3 +20,4 @@ Estándar de C: C11
 Opción utilizada: -std=c11
 
 Al compilar el programa original con GCC se presentan errores debido a que algunas de las sintaxis utilizadas son únicamente para C++.
+<img width="386" height="211" alt="image" src="https://github.com/user-attachments/assets/f1d338ad-f7fc-4a07-b692-53e715b3b727" />
