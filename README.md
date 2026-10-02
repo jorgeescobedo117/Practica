@@ -7,6 +7,7 @@ También se revisaron algunos problemas de seguridad que tiene el código y se r
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Compilación inicial
+
 Para realizar la compilación utilicé:
 
 Compilador: GCC (GNU Compiler Collection)
