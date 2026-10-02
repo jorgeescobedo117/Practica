@@ -42,4 +42,39 @@ Errores producidos y warnings producidos.
 
 <img width="585" height="671" alt="image" src="https://github.com/user-attachments/assets/1e5513df-ea7c-4e33-88bb-2ee3f7685928" />
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Opción que permite obtener información adicional dentro del compilador.
+
+<img width="921" height="35" alt="image" src="https://github.com/user-attachments/assets/08dc42ce-de6d-4724-9f8c-edc06aee7c36" />
+
+<img width="921" height="758" alt="image" src="https://github.com/user-attachments/assets/215bdd57-a723-4770-88bc-d9d765bf99e2" />
+
+--------------------------------------------------------
+
+reglas/recomendaciones CERT
+
+<img width="611" height="712" alt="image" src="https://github.com/user-attachments/assets/3359d125-733c-40c6-b6f8-3e5367d8cdd7" />
+
+-----------------------------------------------------------
+
+Solución B — Refactorización
+
+La razón principal en la que elegí la opción  B puede refactorizar y optimizar el código mientras que en la opción A se enfoca únicamente en silenciar las advertencias inmediatas del compilador, 
+pero no resuelve los problemas estructurales ni previene vulnerabilidades bajo condiciones no previstas o cambios futuros en el código.
+Elegí aplicar la Solución B porque no solo soluciona los warnings del compilador, sino que arregla problemas reales de ejecución y seguridad que tenía el código original por ejemplo : 
+
+
+1.	Evitar el Crash por __FILE__ (get_dirname
+3.	Evitar desbordamientos con fgets y snprintf: 
+Quité la función gets() (insegura por definición) y reemplacé los strcpy/strcat por snprintf
+4.	Validación de argumentos (argc / argv): Agregué un if (argc >= 3) antes de acceder a argv[1] y argv[2]. Sin esto, si alguien ejecuta el programa sin parámetros, se cae inmediatamente.
+5.	Capacidad de los arreglos: Ajusté el tamaño de array3 y array4 a 18 bytes para que la cadena "01234567890123456" quepa completa con su \0 sin truncarse, eliminando también la advertencia del compilador.
+6.	Tipos correctos: Usé const char* en los literales para evitar intentos de escritura no permitidos y cambié las variables de strlen a size_t para respetar los tipos nativos de C.
+
+
+La versión corregida deberá compilar sin warnings
+
+<img width="921" height="74" alt="image" src="https://github.com/user-attachments/assets/c86374bf-4684-4ace-9f52-ddda785674a0" />
+
 
