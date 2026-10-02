@@ -11,6 +11,8 @@ También se revisaron algunos problemas de seguridad que tiene el código y se r
 Para realizar la compilación utilicé:
 Compilador: GCC (GNU Compiler Collection)
 
+<img width="718" height="432" alt="image" src="https://github.com/user-attachments/assets/e8d3b37f-f5e6-44e0-bfd8-341f9aac4947" />
+
 Distribuidor: MSYS2 / MinGW-w64
 
 <img width="386" height="211" alt="image" src="https://github.com/user-attachments/assets/cce67a43-34bc-40c8-aaf3-85a9c7313be4" />
