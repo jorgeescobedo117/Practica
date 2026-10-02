@@ -38,19 +38,8 @@ Mostrar mensajes mas explicados adicionales sobre la las versiones y tipos nulos
 <img width="921" height="33" alt="image" src="https://github.com/user-attachments/assets/ab805159-19ae-4087-9f22-359aaac5388e" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Errores producidos y warnings producidos.
 
-Tipo de Error	Descripción del Compilador	Causa
-WARNING	missing terminating " character	no reconoce la sintaxis , Faltaria las comillas de cierre
-ERROR	missing terminating " character
- const char* s1 = R"foo(	Error sintáctico
-ERROR	'R' undeclared here (not in a function)	Trata la letra R como una variable  que no esta declarada 
-ERROR	expected ',' or ';' before 'Hello'	Estructura de cadena 
-WARNING	missing terminating " character foo"	Error sintáctico
-ERROR	missing terminating " character foo";	Error sintáctico
-ERROR	return' with a value, in function returning void	Esta declarada como void y por ender ocupa un return 1;
-ERROR	's2' undeclared (first use in this function);	No se ha declarado correctamente y no esta en la función 
-WARNING	unused variable 'analitic3'	No se ha declarado correctamente
-WARNING	unused variable 'size_array2'	Variable size_array2 declarada sin ningún uso
-WARNING	Unused variable 'size_array1'	Variable size_array1 declarada sin ningún uso
-WARNING	unused parameter 'argc'	El parámetro argc recibido en main no está siendo  utilizado
+<img width="585" height="671" alt="image" src="https://github.com/user-attachments/assets/1e5513df-ea7c-4e33-88bb-2ee3f7685928" />
+
 
