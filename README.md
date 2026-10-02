@@ -40,7 +40,7 @@ Mostrar mensajes mas explicados adicionales sobre la las versiones y tipos nulos
 <img width="921" height="33" alt="image" src="https://github.com/user-attachments/assets/ab805159-19ae-4087-9f22-359aaac5388e" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Errores producidos y warnings producidos.
+                                                    Errores producidos y warnings producidos.
 
 <img width="585" height="671" alt="image" src="https://github.com/user-attachments/assets/1e5513df-ea7c-4e33-88bb-2ee3f7685928" />
 
@@ -60,7 +60,7 @@ Opción que permite obtener información adicional dentro del compilador.
 
 -----------------------------------------------------------
 
-Solución B — Refactorización
+                                                      Solución B — Refactorización
 
 La razón principal en la que elegí la opción B es más para refactorizar y optimizar el código mientras que en la opción A se enfoca únicamente en silenciar las advertencias inmediatas del compilador, 
 pero no resuelve los problemas estructurales ni previene vulnerabilidades bajo condiciones no previstas o cambios futuros en el código.
