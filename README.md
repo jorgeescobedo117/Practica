@@ -231,4 +231,4 @@ Herramienta:
 -----------------------------------------------------------------------------------------------------------------------
 
 
-<img width="684" height="695" alt="image" src="https://github.com/user-attachments/assets/30678a5f-a11f-481d-85ed-89371e5458a0" />
+              <img width="684" height="695" alt="image" src="https://github.com/user-attachments/assets/30678a5f-a11f-481d-85ed-89371e5458a0" />
