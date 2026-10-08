@@ -195,8 +195,9 @@ exampleStrings_fixed.c (Corregido)
 <img width="852" height="106" alt="image" src="https://github.com/user-attachments/assets/6014ed9e-5f92-4090-b5e6-5ca1af7cf57c" />
 
 -------------------------------------------------------------------------------------------------------------
-
+                                                   
                                                     Técnicas de Verificación
+                                                   
 
 --------------------------------------------------------------------------------------------------------------
 1.- Análisis Estático (GCC -fanalyzer + Banderas de Inspección)
@@ -218,6 +219,7 @@ Herramienta:
 <img width="921" height="463" alt="image" src="https://github.com/user-attachments/assets/2d057ae9-5a3d-422e-8bf6-36038159d731" />
 
 2.- En exampleStrings.c Ejecutamos el comando en la terminal para la capturacion del fallo crítico en tiempo de ejecución al ejecutar sin argumentos.
+
 <img width="921" height="234" alt="image" src="https://github.com/user-attachments/assets/fc2c2ac1-7fca-4b63-a257-481e6e80ff12" />
 
 3.- En exampleStrings_fixed.c: Al ejecutar el programa con y sin argumentos, e ingresar cadenas largas por entrada estándar, ASan confirmó que no existió ninguna fuga ni corrupción de memoria (salida 0).
