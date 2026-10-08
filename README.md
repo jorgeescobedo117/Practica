@@ -225,3 +225,10 @@ Herramienta:
 3.- En exampleStrings_fixed.c: Al ejecutar el programa con y sin argumentos, e ingresar cadenas largas por entrada estándar, ASan confirmó que no existió ninguna fuga ni corrupción de memoria (salida 0).
 
 ----------------------------------------------------------------------------------------------------------------------
+
+                                                         Evidencias
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+<img width="684" height="695" alt="image" src="https://github.com/user-attachments/assets/30678a5f-a11f-481d-85ed-89371e5458a0" />
