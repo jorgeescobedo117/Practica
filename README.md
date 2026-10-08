@@ -80,4 +80,7 @@ La versión corregida deberá compilar sin warnings
 
 <img width="921" height="74" alt="image" src="https://github.com/user-attachments/assets/c86374bf-4684-4ace-9f52-ddda785674a0" />
 
+----------------------------------------------------------
+                                                     PARTE II — Tests y verificación
 
+-----------------------------------------------------------
