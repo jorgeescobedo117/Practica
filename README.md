@@ -127,9 +127,31 @@ exampleStrings_fixed.c (Corregido)
 
 <img width="921" height="62" alt="image" src="https://github.com/user-attachments/assets/1b44a235-3e1f-4494-8d8f-32d900a0451e" />
 
----------------------------------------------------------------
+
 -----------------------------------------------------------------
 Caso de Prueba 2: Validación de Argumentos de Línea de Comandos (argc / argv)
 ------------------------------------------------------------------
+Problema: Acceso directo e incondicional a argv[1] y argv[2] usando strcpy y strcat sin verificar el número de argumentos recibidos ni la capacidad
+Objetivo: Comprobar la resiliencia del programa ante la ausencia de argumentos de escenarios nulo y entradas con cadenas excesivamente largas no se desborde
+Tipo de Analisis : Análisis Dinámico (Prueba de estrés sin argumentos) 
+
+<img width="590" height="165" alt="image" src="https://github.com/user-attachments/assets/ae16a0d5-9159-47e4-8a35-d84361bc83fe" />
+
+Para la verificación de este Error se verifico con el comando:
+
+ <img width="921" height="35" alt="image" src="https://github.com/user-attachments/assets/008dd644-02ca-437d-86d7-a1970cd02bc8" />
+
+exampleStrings.c (Código Original)
+<img width="863" height="173" alt="image" src="https://github.com/user-attachments/assets/82ac0db0-4824-4100-a3b0-539bdf0d2073" />
+
+exampleStrings_fixed.c (Corregido)
+
+<img width="826" height="336" alt="image" src="https://github.com/user-attachments/assets/40397bb3-c518-4867-a43e-fbd9b7e55b02" />
+
+
 -----------------------------------------------------------------
+Caso de Prueba 3: Inserción Segura de Datos por Entrada en métodos gets vs fgets
+------------------------------------------------------------------
+
+
 
