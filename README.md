@@ -85,20 +85,51 @@ La versión corregida deberá compilar sin warnings
 
 -----------------------------------------------------------
 
-                                              ¿Podemos demostrar que el código original presenta realmente el problema identificado?
+                                        ¿Podemos demostrar que el código original presenta realmente el problema identificado?
 
 Asi es quedo demostrado que el código original presenta problemas identificados a la hora de compilar la prueba se somete a la prueba de gcc la intentar compilar este código , resulta varios errores de sintaxis que no son de C si no que también tienen parte de c++ .
 También hay adventencias criticas de seguridad a la hora de implementar los gets , ya que en C es una función obsoleta 
 
-                                              ¿Podemos demostrar que nuestra modificación evita dicho problema?
+                                          ¿Podemos demostrar que nuestra modificación evita dicho problema?
                                               
 Asi es , quedo demostrado que a la hora de comprobar la versión modificada esta no tienen ningún error de sintaxis o de exceso de memoria que pueda tronar el programa o vulnerarlo bajo las banderas de Wall , Wextra y Wpedantic , se ejecuta de forma estable.
 
 -----------------------------------------------------------
-                                                    Diseño de pruebas
+                                            Diseño de pruebas
                                                     
 Seleccione al menos cuatro problemas diferentes identificados durante la Parte I.
 Para cada uno deberá diseñar una prueba o procedimiento de verificación.
+
+
+Caso de Prueba 1: Sintaxis y Conformidad con el Estándar C (Raw String Literal)
+
+<img width="544" height="77" alt="image" src="https://github.com/user-attachments/assets/f50ab64c-f1c2-4738-af3b-834a3a31ad9c" />
+
+Problema: Uso de sintaxis propia de C++ (R"foo(...)") en el archivo fuente de C.
+Objetivo: Verificar que el código respeta la especificación del estándar C (C11) durante la fase de compilación.
+Tipo de análisis:  Análisis estático
+
+<img width="921" height="128" alt="image" src="https://github.com/user-attachments/assets/d36c47c0-4444-42e4-bd67-dde10d78b388" />
+
+Para la verificación de este Error se verifico con el comando: 
+
+<img width="921" height="35" alt="image" src="https://github.com/user-attachments/assets/2083846b-2280-447d-b1c3-9d61b90f0ba4" />
+
+<img width="517" height="98" alt="image" src="https://github.com/user-attachments/assets/34cceea2-f5a3-461b-8cff-c307b23669f1" />
+
+<img width="538" height="45" alt="image" src="https://github.com/user-attachments/assets/aa9c6bd7-8d32-4595-aea1-6297724370ec" />
+
+exampleStrings.c (Código Original)
+
+<img width="921" height="71" alt="image" src="https://github.com/user-attachments/assets/efff49b5-7554-4387-bcd4-653146b56c80" />
+
+exampleStrings_fixed.c (Corregido)
+
+<img width="921" height="62" alt="image" src="https://github.com/user-attachments/assets/1b44a235-3e1f-4494-8d8f-32d900a0451e" />
+
+
+
+
 
 ---------------------------------------------------------------
 
