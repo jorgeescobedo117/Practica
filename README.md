@@ -127,9 +127,9 @@ exampleStrings_fixed.c (Corregido)
 
 <img width="921" height="62" alt="image" src="https://github.com/user-attachments/assets/1b44a235-3e1f-4494-8d8f-32d900a0451e" />
 
-
-
-
-
 ---------------------------------------------------------------
+-----------------------------------------------------------------
+Caso de Prueba 2: Validación de Argumentos de Línea de Comandos (argc / argv)
+------------------------------------------------------------------
+-----------------------------------------------------------------
 
