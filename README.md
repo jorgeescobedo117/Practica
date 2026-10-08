@@ -85,24 +85,24 @@ La versión corregida deberá compilar sin warnings
 
 -----------------------------------------------------------
 
-                                        ¿Podemos demostrar que el código original presenta realmente el problema identificado?
+                                      ¿Podemos demostrar que el código original presenta realmente el problema identificado?
 
 Asi es quedo demostrado que el código original presenta problemas identificados a la hora de compilar la prueba se somete a la prueba de gcc la intentar compilar este código , resulta varios errores de sintaxis que no son de C si no que también tienen parte de c++ .
 También hay adventencias criticas de seguridad a la hora de implementar los gets , ya que en C es una función obsoleta 
 
-                                          ¿Podemos demostrar que nuestra modificación evita dicho problema?
+                                      ¿Podemos demostrar que nuestra modificación evita dicho problema?
                                               
 Asi es , quedo demostrado que a la hora de comprobar la versión modificada esta no tienen ningún error de sintaxis o de exceso de memoria que pueda tronar el programa o vulnerarlo bajo las banderas de Wall , Wextra y Wpedantic , se ejecuta de forma estable.
 
 -----------------------------------------------------------
-                                            Diseño de pruebas
+                                          Diseño de pruebas
                                                     
 Seleccione al menos cuatro problemas diferentes identificados durante la Parte I.
 Para cada uno deberá diseñar una prueba o procedimiento de verificación.
-
-
+---------------------------------------------------------------
+--------------------------------------------------------------------------------
 Caso de Prueba 1: Sintaxis y Conformidad con el Estándar C (Raw String Literal)
-
+-------------------------------------------------------------------------------
 <img width="544" height="77" alt="image" src="https://github.com/user-attachments/assets/f50ab64c-f1c2-4738-af3b-834a3a31ad9c" />
 
 Problema: Uso de sintaxis propia de C++ (R"foo(...)") en el archivo fuente de C.
