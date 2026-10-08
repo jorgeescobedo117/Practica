@@ -231,5 +231,6 @@ Herramienta:
 -----------------------------------------------------------------------------------------------------------------------
 
 
- <img width="676" height="651" alt="image" src="https://github.com/user-attachments/assets/a62af8f8-0229-4fa2-8f1f-532fadfcb0e6" />
+<img width="688" height="657" alt="image" src="https://github.com/user-attachments/assets/31d22451-c59c-42e0-a7d1-27bc46264760" />
+
 
