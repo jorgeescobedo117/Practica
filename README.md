@@ -196,12 +196,30 @@ exampleStrings_fixed.c (Corregido)
 
 -------------------------------------------------------------------------------------------------------------
 
+                                                    Técnicas de Verificación
 
+--------------------------------------------------------------------------------------------------------------
+1.- Análisis Estático (GCC -fanalyzer + Banderas de Inspección)
+---------------------------------------------------------------
+Descripción: Se revisa  el código fuente antes de la ejecución para detectar inconsistencias de tipos, accesos a punteros nulos, funciones obsoletas y violaciones a estándares 
 
+Herramienta
 
+<img width="921" height="38" alt="image" src="https://github.com/user-attachments/assets/851c0b1e-2ab0-4d3d-a768-e3ad9e2a0bf4" />
 
+------------------------------------------------------------------
+2.- Análisis Dinámico con Sanitizadores (AddressSanitizer / ASan)
+------------------------------------------------------
+Descripción: Para monitorear el acceso a la memoria en tiempo real durante la ejecución del programa. Intercepta y reporta caídas como desbordamientos de búfer en pila stack buffer 
+Herramienta: 
+1.-Se instala la dependencia  principalmente  con el comando :
+<img width="502" height="36" alt="image" src="https://github.com/user-attachments/assets/f1677eea-0a12-424c-b141-a1bd5077f138" />
 
+<img width="921" height="463" alt="image" src="https://github.com/user-attachments/assets/2d057ae9-5a3d-422e-8bf6-36038159d731" />
 
+2.- En exampleStrings.c Ejecutamos el comando en la terminal para la capturacion del fallo crítico en tiempo de ejecución al ejecutar sin argumentos.
+<img width="921" height="234" alt="image" src="https://github.com/user-attachments/assets/fc2c2ac1-7fca-4b63-a257-481e6e80ff12" />
 
+3.- En exampleStrings_fixed.c: Al ejecutar el programa con y sin argumentos, e ingresar cadenas largas por entrada estándar, ASan confirmó que no existió ninguna fuga ni corrupción de memoria (salida 0).
 
-
+----------------------------------------------------------------------------------------------------------------------
