@@ -84,3 +84,21 @@ La versión corregida deberá compilar sin warnings
                                                      PARTE II — Tests y verificación
 
 -----------------------------------------------------------
+
+                                              ¿Podemos demostrar que el código original presenta realmente el problema identificado?
+
+Asi es quedo demostrado que el código original presenta problemas identificados a la hora de compilar la prueba se somete a la prueba de gcc la intentar compilar este código , resulta varios errores de sintaxis que no son de C si no que también tienen parte de c++ .
+También hay adventencias criticas de seguridad a la hora de implementar los gets , ya que en C es una función obsoleta 
+
+                                              ¿Podemos demostrar que nuestra modificación evita dicho problema?
+                                              
+Asi es , quedo demostrado que a la hora de comprobar la versión modificada esta no tienen ningún error de sintaxis o de exceso de memoria que pueda tronar el programa o vulnerarlo bajo las banderas de Wall , Wextra y Wpedantic , se ejecuta de forma estable.
+
+-----------------------------------------------------------
+                                                    Diseño de pruebas
+                                                    
+Seleccione al menos cuatro problemas diferentes identificados durante la Parte I.
+Para cada uno deberá diseñar una prueba o procedimiento de verificación.
+
+---------------------------------------------------------------
+
