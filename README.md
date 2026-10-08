@@ -85,21 +85,21 @@ La versión corregida deberá compilar sin warnings
 
 -----------------------------------------------------------
 
-                                      ¿Podemos demostrar que el código original presenta realmente el problema identificado?
+                                ¿Podemos demostrar que el código original presenta realmente el problema identificado?
 
-Asi es quedo demostrado que el código original presenta problemas identificados a la hora de compilar la prueba se somete a la prueba de gcc la intentar compilar este código , resulta varios errores de sintaxis que no son de C si no que también tienen parte de c++ .
+Asi es, quedo demostrado que el código original presenta problemas identificados a la hora de compilar la prueba se somete a la prueba de gcc la intentar compilar este código , resulta varios errores de sintaxis que no son de C si no que también tienen parte de c++ .
 También hay adventencias criticas de seguridad a la hora de implementar los gets , ya que en C es una función obsoleta 
 
-                                      ¿Podemos demostrar que nuestra modificación evita dicho problema?
+                                ¿Podemos demostrar que nuestra modificación evita dicho problema?
                                               
 Asi es , quedo demostrado que a la hora de comprobar la versión modificada esta no tienen ningún error de sintaxis o de exceso de memoria que pueda tronar el programa o vulnerarlo bajo las banderas de Wall , Wextra y Wpedantic , se ejecuta de forma estable.
 
------------------------------------------------------------
+---------------------------------------------------------------------------
                                           Diseño de pruebas
-                                                    
+----------------------------------------------------------------------------                                       
 Seleccione al menos cuatro problemas diferentes identificados durante la Parte I.
 Para cada uno deberá diseñar una prueba o procedimiento de verificación.
----------------------------------------------------------------
+
 --------------------------------------------------------------------------------
 Caso de Prueba 1: Sintaxis y Conformidad con el Estándar C (Raw String Literal)
 -------------------------------------------------------------------------------
@@ -152,6 +152,56 @@ exampleStrings_fixed.c (Corregido)
 -----------------------------------------------------------------
 Caso de Prueba 3: Inserción Segura de Datos por Entrada en métodos gets vs fgets
 ------------------------------------------------------------------
+
+Problema: Uso de la función obsoleta e insegura gets(), la cual no limita la cantidad de caracteres leídos desde stdin
+
+<img width="557" height="99" alt="image" src="https://github.com/user-attachments/assets/886cb603-a506-48bd-9d81-6cea8c50b265" />
+
+Objetivo: verificar la protección contra ataques o desbordamientos al ingresar texto por consola hacia un buffer pequeño.
+
+Técnica Aplicada: Análisis Estático (Inseguridad de funciones) y Análisis Dinámico
+
+Para la verificación de este Error se verifico con el comando:
+
+<img width="921" height="35" alt="image" src="https://github.com/user-attachments/assets/c6ee20e4-6b96-4607-9810-a01a65af0865" />
+
+exampleStrings.c (Código Original)
+
+<img width="807" height="248" alt="image" src="https://github.com/user-attachments/assets/fc3a51e8-1b97-4d40-80ac-74810fa47424" />
+
+exampleStrings_fixed.c (Corregido)
+
+<img width="791" height="363" alt="image" src="https://github.com/user-attachments/assets/8e799ee0-a740-4963-92c0-d0a197d2707a" />
+
+---------------------------------------------------------------
+Caso de Prueba 4 : Modificación de Literal de Cadena vía Puntero
+---------------------------------------------------------------
+Problema: Intentar escribir un carácter dentro de un literal de cadena mediante asignación por puntero
+<img width="524" height="118" alt="image" src="https://github.com/user-attachments/assets/3ee2ef74-b3e8-45e6-9f57-fa4accc16ce7" />
+
+Técnica Aplicada: Análisis Estático (const checking) y Análisis Dinámico (Detección de violación en .rodata).
+
+Objetivo : Declarar el puntero como constante (const char *ptr_char) para que el compilador impida modificaciones en tiempo de compilación y eliminar la instrucción de escritura.
+Para la verificación de este Error se verifico con el comando:
+
+<img width="921" height="35" alt="image" src="https://github.com/user-attachments/assets/0d6791ed-39d7-41aa-81b7-eb0ecd469417" />
+
+exampleStrings.c (Código Original)
+
+<img width="921" height="68" alt="image" src="https://github.com/user-attachments/assets/b85f64a2-dcc2-4a56-968a-b4226044cc7b" />
+
+exampleStrings_fixed.c (Corregido)
+
+<img width="852" height="106" alt="image" src="https://github.com/user-attachments/assets/6014ed9e-5f92-4090-b5e6-5ca1af7cf57c" />
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
