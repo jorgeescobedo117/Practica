@@ -234,3 +234,99 @@ Herramienta:
 <img width="688" height="657" alt="image" src="https://github.com/user-attachments/assets/31d22451-c59c-42e0-a7d1-27bc46264760" />
 
 
+-----------------------------------------------------------------------------------------------------------------------------
+
+Muestras de Evidencias (Salidas de Consola)
+--------------------------------------------------------------------------------------------------------
+
+Evidencia 1: Error de Sintaxis Raw String (STR30-C)
+Al intentar compilar exampleStrings.c bajo el estándar C11, el analizador estático aborta el proceso:
+
+<img width="707" height="161" alt="image" src="https://github.com/user-attachments/assets/a2b29c96-a169-498f-af71-a9692f4f7d1d" />
+
+-----------------------------------------------------------------------------------------------------------
+
+Evidencia 2: Violación de Puntero Nulo en argv (ARR30-C)
+Al ejecutar el binario del código original (sin parámetros) instrumentado con AddressSanitizer, el análisis dinámico detiene la ejecución e informa un fallo catastrófico por lectura de puntero NULL:
+
+<img width="875" height="62" alt="image" src="https://github.com/user-attachments/assets/56e0cb6a-0e71-47c1-8dc3-ccf4ebcff56d" />
+
+-------------------------------------------------------------------------------------------------------------
+
+Evidencia 3: Desbordamiento de Búfer por gets() (STR35-C)
+Al enviar una cadena de 30 caracteres hacia un arreglo de 8 bytes en exampleStrings.c, AddressSanitizer detecta corrupción del marco de pila (Stack Buffer Overflow):
+
+<img width="990" height="391" alt="image" src="https://github.com/user-attachments/assets/90d3a783-17b6-4318-b144-4d1f9753c892" />
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Evidencia 4: Modificación Ilegal de Memoria Protegida (STR30-C)
+Al intentar escribir sobre un literal constante (ptr_char[0] = 'N'), el sistema operativo y ASan capturan la violación de la sección .rodata:
+
+<img width="1465" height="108" alt="image" src="https://github.com/user-attachments/assets/325dad8c-f97b-4b56-9c99-6a9f73210fc2" />
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+                                                                      Tests de regresión
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Caso de Prueba 1: Sintaxis y Conformidad C11 (Raw String Literal)
+------------------------------------------------------------------
+
+Localización: s1 (Línea 22)
+
+Regla CERT: STR30-C
+
+Test 1: Verificación de Compilación
+
+<img width="576" height="138" alt="image" src="https://github.com/user-attachments/assets/bc8ce96f-376d-453e-9a63-e67b793adcef" />
+
+---------------------------------------------------------------------
+
+
+Caso de Prueba 2: Validación de Argumentos argc / argv
+----------------------------------------------------------
+Localización: main() – argv (Línea 77)
+
+Regla CERT: ARR30-C
+
+Test 2: Ejecución sin Argumentos
+
+<img width="543" height="122" alt="image" src="https://github.com/user-attachments/assets/1cb47a92-065e-4e71-9aa6-7ae1cfa7f911" />
+
+-------------------------------------------------------------------------
+
+
+Caso de Prueba 3: Entrada Segura de Datos por Consola (gets vs fgets)
+----------------------------------------------------------------------
+Localización: get_y_or_n() (Línea 49)
+
+Regla CERT: STR35-C
+
+Test 3: Inyección de Cadena Larga en stdin
+
+<img width="536" height="85" alt="image" src="https://github.com/user-attachments/assets/f1fde4b2-e105-4d21-aa79-d5d6889ead98" />
+
+--------------------------------------------------------------------------
+
+Caso de Prueba 4: Proteccion de Memoria de Solo Lectura (ptr_char)
+--------------------------------------------------------------------------
+
+Localización: main() – ptr_char (Línea 93)
+
+Regla CERT: STR30-C
+
+Test 4: Modificación de Puntero Constante
+
+<img width="499" height="73" alt="image" src="https://github.com/user-attachments/assets/1d9eb865-361f-4e96-b066-d2a589bbb4fd" />
+
+
+
+
+
+
+
+
