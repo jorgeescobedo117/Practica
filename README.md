@@ -282,6 +282,9 @@ Regla CERT: STR30-C
 
 Test 1: Verificación de Compilación
 
+<img width="823" height="256" alt="image" src="https://github.com/user-attachments/assets/94f068e0-421c-417c-88b2-286d68f74c17" />
+
+
 <img width="576" height="138" alt="image" src="https://github.com/user-attachments/assets/bc8ce96f-376d-453e-9a63-e67b793adcef" />
 
 ---------------------------------------------------------------------
@@ -294,6 +297,9 @@ Localización: main() – argv (Línea 77)
 Regla CERT: ARR30-C
 
 Test 2: Ejecución sin Argumentos
+
+<img width="924" height="195" alt="image" src="https://github.com/user-attachments/assets/9db34afc-4cca-4afa-9326-035a4972d904" />
+
 
 <img width="543" height="122" alt="image" src="https://github.com/user-attachments/assets/1cb47a92-065e-4e71-9aa6-7ae1cfa7f911" />
 
@@ -308,6 +314,9 @@ Regla CERT: STR35-C
 
 Test 3: Inyección de Cadena Larga en stdin
 
+<img width="1171" height="294" alt="image" src="https://github.com/user-attachments/assets/5af79765-5e96-406f-97c3-7c2ecb3a0c01" />
+
+
 <img width="536" height="85" alt="image" src="https://github.com/user-attachments/assets/f1fde4b2-e105-4d21-aa79-d5d6889ead98" />
 
 --------------------------------------------------------------------------
@@ -321,12 +330,48 @@ Regla CERT: STR30-C
 
 Test 4: Modificación de Puntero Constante
 
+<img width="1020" height="304" alt="image" src="https://github.com/user-attachments/assets/29bd298b-f5eb-465d-94ab-fec4a9c900d1" />
+
 <img width="499" height="73" alt="image" src="https://github.com/user-attachments/assets/1d9eb865-361f-4e96-b066-d2a589bbb4fd" />
 
+------------------------------------------------------------------------------------------------------
 
+                                                      Uso de Inteligencia Artificial  12 y 13 
 
+--------------------------------------------------------------------------------------------------------
 
+Herramientas Utilizadas
+Herramientas de IA: Gemini / ChatGPT.
 
+Tareas en las que se utilizó
+1. Identificación Inicial de Vulnerabilidades: Revisión del código original exampleStrings.c para mapear los fallos
 
+2 .sugerencia de Pruebas de Regresión: Generación de estructuras de prueba en Bash y propuesta de escenarios límite
 
+3. Diagnóstico de Errores del Entorno: Interpretación de mensajes emitidos por el compilador gcc y por el linker
+
+----------------------------------------------------------------------------------------------------------------
+Cada regla CERT sugerida por la IA fue verificada directamente en la documentación oficial de la SEI CERT C Coding Standard.
+----------------------------------------------------------
+Pruebas de Compilacion
+---------------------------------------------------------------
+código compilando con el estándar estricto C11 (-std=c11) y el nivel máximo de advertencias (-Wall -Wextra -Wpedantic) usando GCC 13/16 en el entorno UCRT64.
+
+Ejemplo Relevante de Propuesta Incorrecta 
+-----------------------------------------------------------------
+Durante el refactorizado para corregir el desbordamiento de búfer y las copias de cadenas, la IA sugirió la función strncpy:
+
+// Propuesta insegura generada inicialmente por la IA:
+strncpy(array3, array5, sizeof(array3));
+
+----------------------------------------------------
+Problema Identificado: Al revisar la norma CERT STR32-C y la documentación de C11, se detectó que si array5 es igual o más grande que el tamaño del destino (sizeof(array3)), strncpy no escribe el carácter nulo terminal (\0). Esto dejaba la cadena desprotegida ante subsecuentes operaciones de lectura de cadenas.
+--------------------------------------------------------------------
+Solución Corregida Aplicada: Se descartó la sugerencia de la IA y se reemplazó por snprintf, el cual garantiza que la cadena siempre quede terminada en \0:
+---------------------------------------------------------------------------------
+
+                                                                Tiempo Necesario para Realizar el Ejercicio
+
+--------------------------------------------------------------------------------------------
+Tiempo Total Estimado: ~6 horas  (divididos entre el análisis del código fuente original, la refactorización conforme a CERT C, la configuración de la suite de regresión en Bash y la redacción de evidencias de auditoría).
 
