@@ -1,4 +1,7 @@
-                                                              Practica 1
+                                                              Practica Parte 1 y parte 2
+---------------------------------------------------------------------------------------------------------------------
+
+
 Auditoría y verificación de seguridad en el manejo de cadenas en C
 
 En esta práctica se realizó una auditoría al código original para poder identificar los diferentes errores y warnings que se generan al momento de compilarlo.
