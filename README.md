@@ -343,6 +343,10 @@ Test 4: Modificación de Puntero Constante
 Herramientas Utilizadas
 Herramientas de IA: Gemini / ChatGPT.
 
+Se estuvo preguntando por cada opción que pueda parecer mas directa 
+
+<img width="950" height="576" alt="image" src="https://github.com/user-attachments/assets/7c757d8c-dd2b-4497-abcf-cf84a39cf65f" />
+
 Tareas en las que se utilizó
 1. Identificación Inicial de Vulnerabilidades: Revisión del código original exampleStrings.c para mapear los fallos
 
