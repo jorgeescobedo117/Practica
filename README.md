@@ -370,5 +370,5 @@ Problema Identificado: Al revisar la norma CERT STR32-C y la documentación de C
                             Tiempo Necesario para Realizar el Ejercicio
 
 --------------------------------------------------------------------------------------------
-Tiempo Total Estimado: ~6 horas  (divididos entre el análisis del código fuente original, la refactorización conforme a CERT C, la configuración de la suite de regresión en Bash y la redacción de evidencias de auditoría).
+Tiempo Total Estimado: 6 horas  (divididos entre el análisis del código fuente original, la refactorización conforme a CERT C, la configuración de la suite de regresión en Bash y la redacción de evidencias de auditoría).
 
