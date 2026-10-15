@@ -1,4 +1,4 @@
-                                                              Practica Parte 1 y parte 2
+                                                        Practica Parte 1 y parte 2
 ---------------------------------------------------------------------------------------------------------------------
 
 
@@ -85,7 +85,6 @@ La versión corregida deberá compilar sin warnings
 
 ----------------------------------------------------------
                                                      PARTE II — Tests y verificación
-
 -----------------------------------------------------------
 
                                 ¿Podemos demostrar que el código original presenta realmente el problema identificado?
@@ -271,8 +270,7 @@ Al intentar escribir sobre un literal constante (ptr_char[0] = 'N'), el sistema 
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-                                                                      Tests de regresión
-
+                                                        Tests de regresión
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
@@ -353,7 +351,7 @@ Se estuvo preguntando por cada opción que pueda parecer mas directa
 Tareas en las que se utilizó
 1. Identificación Inicial de Vulnerabilidades: Revisión del código original exampleStrings.c para mapear los fallos
 
-2 .sugerencia de Pruebas de Regresión: Generación de estructuras de prueba en Bash y propuesta de escenarios límite
+2  Sugerencia de Pruebas de Regresión: Generación de estructuras de prueba en Bash y propuesta de escenarios límite
 
 3. Diagnóstico de Errores del Entorno: Interpretación de mensajes emitidos por el compilador gcc y por el linker
 
@@ -364,20 +362,12 @@ Pruebas de Compilacion
 ---------------------------------------------------------------
 código compilando con el estándar estricto C11 (-std=c11) y el nivel máximo de advertencias (-Wall -Wextra -Wpedantic) usando GCC 13/16 en el entorno UCRT64.
 
-Ejemplo Relevante de Propuesta Incorrecta 
------------------------------------------------------------------
-Durante el refactorizado para corregir el desbordamiento de búfer y las copias de cadenas, la IA sugirió la función strncpy:
-
-// Propuesta insegura generada inicialmente por la IA:
-strncpy(array3, array5, sizeof(array3));
-
 ----------------------------------------------------
 Problema Identificado: Al revisar la norma CERT STR32-C y la documentación de C11, se detectó que si array5 es igual o más grande que el tamaño del destino (sizeof(array3)), strncpy no escribe el carácter nulo terminal (\0). Esto dejaba la cadena desprotegida ante subsecuentes operaciones de lectura de cadenas.
---------------------------------------------------------------------
-Solución Corregida Aplicada: Se descartó la sugerencia de la IA y se reemplazó por snprintf, el cual garantiza que la cadena siempre quede terminada en \0:
+
 ---------------------------------------------------------------------------------
 
-                                                                Tiempo Necesario para Realizar el Ejercicio
+                            Tiempo Necesario para Realizar el Ejercicio
 
 --------------------------------------------------------------------------------------------
 Tiempo Total Estimado: ~6 horas  (divididos entre el análisis del código fuente original, la refactorización conforme a CERT C, la configuración de la suite de regresión en Bash y la redacción de evidencias de auditoría).
